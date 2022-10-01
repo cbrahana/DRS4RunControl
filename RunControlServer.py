@@ -1,7 +1,7 @@
 import keyboard
 import time
 
-HOST = 169.231.128.32
+HOST = 128.111.19.39
 PORT = 52090
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -17,8 +17,11 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             keyboard.press_and_release('ctrl+s')
             time.sleep(0.1)
             keyboard.write(decoded_commands_list[1] + ".dat")
+            time.sleep(0.1)
             keyboard.press_and_release("enter")
+            time.sleep(0.1)
             keyboard.write(decoded_commands_list[2])
+            time.sleep(0.1)
             keyboard.press_and_release("enter")
         if not data:
             break
